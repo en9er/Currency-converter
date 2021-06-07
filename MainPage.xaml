@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyConverter.MainPage">
+
+    <StackLayout BackgroundColor="Gray">
+
+
+        <StackLayout Orientation="Horizontal">
+            <Picker x:Name="picker_source"
+                    WidthRequest="80"
+                    SelectedItem="{Binding FSelectedChanged}">
+            </Picker>
+            <Entry
+                Keyboard="Numeric"
+                HorizontalTextAlignment="Center"
+                WidthRequest="300"
+                Text="{Binding First}"
+                TextColor="Black"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Picker x:Name="picker_target"
+                    WidthRequest="80"
+                    SelectedItem="{Binding SSelectedChanged}">
+            </Picker>
+            <Entry
+                Keyboard="Numeric"
+                WidthRequest="300"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Second}"
+                TextColor="Black"/>
+        </StackLayout>
+        
+
+    </StackLayout>
+</ContentPage>
